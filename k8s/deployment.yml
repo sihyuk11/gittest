@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: test-dep2
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: test-dep2
+
+  template:
+    metadata:
+      labels:
+        app: test-dep2
+
+    spec:
+      containers:
+      - name: test-dep2
+        image: sihyuk11/test_dep:latest
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 8080
