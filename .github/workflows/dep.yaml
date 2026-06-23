@@ -20,12 +20,12 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build \
-            -t sihyuk11/test_dep:latest \
+            -t sihyuk11/jenkins:v1 \
             .
 
       - name: Push Docker Image
         run: |
-          docker push sihyuk11/test_dep:latest
+          docker push sihyuk11/jenkins:v1
 
       - name: Deploy Kubernetes
         run: |
@@ -33,7 +33,7 @@ jobs:
 
           cd /DATA/test8/k8s
 
-          docker pull sihyuk11/jenkins:latest
+          docker pull sihyuk11/jenkins:v1
 
           kubectl apply -f deployment.yml
 
