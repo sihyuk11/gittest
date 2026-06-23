@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: test-dep1-service
+  name: test-dep8-service
 
 spec:
   selector:
-    app: test-dep1
+    app: test-dep8
 
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 9999
+      targetPort: 9999
 
   type: ClusterIP

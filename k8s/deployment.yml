@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: test-dep2
+  name: test-dep8
 
 spec:
   replicas: 1
 
   selector:
     matchLabels:
-      app: test-dep2
+      app: test-dep8
 
   template:
     metadata:
       labels:
-        app: test-dep2
+        app: test-dep8
 
     spec:
       containers:
-      - name: test-dep2
-        image: sihyuk11/test_dep:latest
+      - name: test-dep8
+        image: sihyuk11/jenkins:v1
         imagePullPolicy: Always
 
         ports:
-        - containerPort: 8080
+        - containerPort: 9999

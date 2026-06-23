@@ -31,15 +31,15 @@ jobs:
         run: |
           export KUBECONFIG=/home/test/.kube/config
 
-          cd /DATA/test6/k8s
+          cd /DATA/test8/k8s
 
-          docker pull sihyuk11/test_dep:latest
+          docker pull sihyuk11/jenkins:latest
 
           kubectl apply -f deployment.yml
 
           kubectl apply -f svc.yml
 
-          kubectl rollout restart deployment test-dep2
+          kubectl rollout restart deployment test-dep8
 
-          kubectl rollout status deployment test-dep2
+          kubectl rollout status deployment test-dep8
 
